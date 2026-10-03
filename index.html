@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>福岡市 哲学書・心理学輪読会</title>
+<meta name="description" content="福岡市で毎週活動している哲学書・心理学書の輪読会です。年齢層は幅広く、初めての方も歓迎しています。参加希望・お問い合わせはフォームからどうぞ。">
+<meta property="og:title" content="福岡市 哲学書・心理学輪読会">
+<meta property="og:description" content="福岡市で毎週活動している哲学書・心理学書の輪読会。年齢層は幅広く、初めての方も歓迎。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f3ec;
+  --surface: #fffdf9;
+  --ink: #2a2622;
+  --muted: #6b635a;
+  --line: #e2d9cc;
+  --accent: #7a3e2c;
+  --accent-ink: #ffffff;
+  --accent-soft: #f1e4dc;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1916;
+    --surface: #24211d;
+    --ink: #ece6dc;
+    --muted: #a99f92;
+    --line: #3a352f;
+    --accent: #d99a7f;
+    --accent-ink: #1b1916;
+    --accent-soft: #33271f;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Noto Sans JP", system-ui, sans-serif;
+  line-height: 1.9;
+  font-size: 16px;
+}
+h1, h2, h3 { font-family: "Noto Serif JP", serif; line-height: 1.5; margin: 0; }
+a { color: var(--accent); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+header.site {
+  border-bottom: 1px solid var(--line);
+}
+header.site .wrap {
+  display: flex; justify-content: space-between; align-items: center;
+  height: 60px;
+}
+header.site .logo { font-family: "Noto Serif JP", serif; font-weight: 700; text-decoration: none; color: var(--ink); }
+header.site nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 14px; }
+header.site nav a:hover { color: var(--accent); }
+
+.hero { padding: 88px 0 72px; }
+.hero .eyebrow { color: var(--accent); font-size: 14px; letter-spacing: .12em; margin: 0 0 12px; }
+.hero h1 { font-size: clamp(28px, 5.4vw, 46px); }
+.hero p.lead { color: var(--muted); font-size: 17px; margin: 24px 0 36px; max-width: 34em; }
+.btn {
+  display: inline-block; background: var(--accent); color: var(--accent-ink);
+  padding: 14px 32px; border-radius: 999px; text-decoration: none; font-weight: 700;
+  border: 0; font-size: 16px; font-family: inherit; cursor: pointer;
+}
+.btn:hover { opacity: .9; }
+
+section { padding: 64px 0; border-top: 1px solid var(--line); }
+section h2 { font-size: 26px; margin-bottom: 28px; }
+section h2 small { display: block; font-family: "Noto Sans JP", sans-serif; font-size: 13px; color: var(--accent); letter-spacing: .14em; font-weight: 500; }
+
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px 24px; }
+.card .num { font-family: "Noto Serif JP", serif; font-size: 34px; color: var(--accent); line-height: 1; }
+.card h3 { font-size: 18px; margin: 14px 0 8px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+.steps li { counter-increment: s; position: relative; padding: 0 0 24px 52px; }
+.steps li::before {
+  content: counter(s); position: absolute; left: 0; top: 2px;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent);
+  display: grid; place-items: center; font-weight: 700;
+}
+.steps li strong { display: block; }
+.steps li span { color: var(--muted); font-size: 15px; }
+
+dl.faq dt { font-weight: 700; margin-top: 20px; }
+dl.faq dt::before { content: "Q. "; color: var(--accent); }
+dl.faq dd { margin: 4px 0 0; color: var(--muted); }
+
+form { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 32px; }
+.field { margin-bottom: 20px; }
+label { display: block; font-weight: 500; margin-bottom: 6px; font-size: 15px; }
+label .req { color: var(--accent); font-size: 12px; margin-left: 6px; }
+input, select, textarea {
+  width: 100%; padding: 12px 14px; font: inherit; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+textarea { min-height: 150px; resize: vertical; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.note { color: var(--muted); font-size: 13px; margin-top: 14px; }
+.hp { position: absolute; left: -9999px; }
+
+footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted); font-size: 13px; text-align: center; }
+
+@media (max-width: 720px) {
+  header.site nav { display: none; }
+  .hero { padding: 56px 0 48px; }
+  .features { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; gap: 0; }
+  form { padding: 22px 18px; }
+  section { padding: 48px 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#">福岡市 哲学書・心理学輪読会</a>
+    <nav>
+      <a href="#about">会について</a>
+      <a href="#flow">参加の流れ</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">FUKUOKA ・ PHILOSOPHY &amp; PSYCHOLOGY READING CIRCLE</p>
+      <h1>一冊の本を、<br>みんなでゆっくり読む。</h1>
+      <p class="lead">福岡市で毎週活動している、哲学書と心理学書の輪読会です。学生から社会人、シニアの方まで、幅広い年齢の参加者が集まっています。ひとりでは読み進めにくい本も、みんなで読めば理解が深まります。</p>
+      <a class="btn" href="#contact">フォームから問い合わせる</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2><small>ABOUT</small>この会について</h2>
+      <div class="features">
+        <div class="card">
+          <div class="num">01</div>
+          <h3>毎週活動しています</h3>
+          <p>週に一度集まり、少しずつ読み進めています。続けて読むことで、難しい本も最後まで読み通せます。</p>
+        </div>
+        <div class="card">
+          <div class="num">02</div>
+          <h3>年齢層は幅広く</h3>
+          <p>学生、社会人、シニアの方まで、いろいろな年代の方が参加しています。それぞれの経験から出てくる読み方が、議論を豊かにします。</p>
+        </div>
+        <div class="card">
+          <div class="num">03</div>
+          <h3>哲学と心理学</h3>
+          <p>哲学書と心理学書を中心に読んでいます。人の心や生き方について、本を手がかりに一緒に考えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flow">
+    <div class="wrap">
+      <h2><small>HOW TO JOIN</small>参加の流れ</h2>
+      <ol class="steps">
+        <li><strong>フォームからご連絡ください</strong><span>このページ下のフォームに、お名前とメールアドレスを入れて送ってください。</span></li>
+        <li><strong>メールでご案内します</strong><span>活動の曜日・時間・場所、いま読んでいる本などをお知らせします。</span></li>
+        <li><strong>会に参加</strong><span>まずは見学のつもりで、気軽にお越しください。</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2><small>FAQ</small>よくある質問</h2>
+      <dl class="faq">
+        <dt>哲学や心理学の知識がなくても大丈夫ですか？</dt>
+        <dd>大丈夫です。わからないところをみんなで考えるのが輪読会です。初めての方も歓迎しています。</dd>
+        <dt>どこで、いつ集まっていますか？</dt>
+        <dd>福岡市内で毎週活動しています。くわしい日時と場所は、お問い合わせのあとにメールでお知らせします。</dd>
+        <dt>途中から参加しても読書についていけますか？</dt>
+        <dd>読んでいる本や進み具合はご連絡のときにお伝えします。気になることはフォームから何でも聞いてください。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2><small>CONTACT</small>お問い合わせ・参加希望</h2>
+      <p>参加してみたい方、見学したい方、質問がある方は、こちらのフォームからご連絡ください。</p>
+      <form action="https://formsubmit.co/hikakin0706@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="【輪読会】ホームページからのお問い合わせ">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://hikaru0706.github.io/fukuoka-rindoku/thanks.html">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="row">
+          <div class="field">
+            <label for="name">お名前<span class="req">必須</span></label>
+            <input id="name" name="お名前" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">メールアドレス<span class="req">必須</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="age">年代</label>
+            <select id="age" name="年代">
+              <option value="">選んでください（任意）</option>
+              <option>10代</option><option>20代</option><option>30代</option>
+              <option>40代</option><option>50代</option><option>60代</option>
+              <option>70代以上</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="kind">ご用件</label>
+            <select id="kind" name="ご用件">
+              <option>参加したい</option>
+              <option>見学したい</option>
+              <option>質問がある</option>
+              <option>その他</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="msg">メッセージ</label>
+          <textarea id="msg" name="メッセージ" placeholder="興味のある本や分野、質問などがあればご自由にどうぞ。"></textarea>
+        </div>
+        <button class="btn" type="submit">送信する</button>
+        <p class="note">いただいた情報は、この会からのご連絡にだけ使います。</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 福岡市 哲学書・心理学輪読会</div>
+</footer>
+
+</body>
+</html>
