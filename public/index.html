@@ -61,7 +61,8 @@ header.site nav a:hover { color: var(--accent); }
 
 .hero { padding: 88px 0 72px; }
 .hero .eyebrow { color: var(--accent); font-size: 14px; letter-spacing: .12em; margin: 0 0 12px; }
-.hero h1 { font-size: clamp(28px, 5.4vw, 46px); }
+.hero h1 { font-size: clamp(26px, 3.6vw, 40px); }
+.nw { white-space: nowrap; }
 .hero p.lead { color: var(--muted); font-size: 17px; margin: 24px 0 36px; max-width: 34em; }
 .btn {
   display: inline-block; background: var(--accent); color: var(--accent-ink);
@@ -69,13 +70,13 @@ header.site nav a:hover { color: var(--accent); }
   border: 0; font-size: 16px; font-family: inherit; cursor: pointer;
 }
 .btn:hover { opacity: .9; }
-.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
-.hero-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 42%; border-radius: 14px; display: block; }
 
 .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
 .gallery p { margin: 0 0 16px; }
 .gallery figure { margin: 0; }
-.gallery img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; display: block; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 30%; border-radius: 12px; display: block; }
 .gallery figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
 
 section { padding: 64px 0; border-top: 1px solid var(--line); }
@@ -124,7 +125,6 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
   .hero { padding: 40px 0 48px; }
   .hero-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero-photo { order: -1; }
-  .hero-photo img { aspect-ratio: 4 / 3; }
   .gallery { grid-template-columns: 1fr; }
   .features { grid-template-columns: 1fr; }
   .row { grid-template-columns: 1fr; gap: 0; }
@@ -153,7 +153,7 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
     <div class="wrap hero-grid">
       <div>
       <p class="eyebrow">FUKUOKA ・ PHILOSOPHY &amp; PSYCHOLOGY READING CIRCLE</p>
-      <h1>一冊の本を、<br>みんなでゆっくり読む。</h1>
+      <h1><span class="nw">一冊の本を、</span><br><span class="nw">みんなでゆっくり読む。</span></h1>
       <p class="lead">福岡市で毎週活動している、哲学書と心理学書の輪読会です。学生から社会人、シニアの方まで、幅広い年齢の参加者が集まっています。ひとりでは読み進めにくい本も、みんなで読めば理解が深まります。</p>
       <a class="btn" href="#contact">フォームから問い合わせる</a>
       </div>
@@ -233,7 +233,7 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
       <form action="https://formsubmit.co/hikakin0706@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="【輪読会】ホームページからのお問い合わせ">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://hikaru0706.github.io/fukuoka-rindoku/thanks.html">
+        <input type="hidden" name="_next" value="https://fukuoka-rindoku.web.app/thanks.html">
         <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <div class="row">
