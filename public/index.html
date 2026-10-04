@@ -12,7 +12,18 @@
 <meta property="og:url" content="https://fukuoka-rindoku.web.app/">
 <meta property="og:image" content="https://fukuoka-rindoku.web.app/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"福岡市 哲学書・心理学輪読会","url":"https://fukuoka-rindoku.web.app/","image":"https://fukuoka-rindoku.web.app/img/og.jpg","description":"福岡市で毎週活動している哲学書・心理学書の読書会。予備知識不要、見学歓迎。","areaServed":"福岡市"}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","name":"福岡市 哲学書・心理学輪読会","url":"https://fukuoka-rindoku.web.app/","image":"https://fukuoka-rindoku.web.app/img/og.jpg","description":"福岡市で毎週活動している哲学書・心理学書の読書会。予備知識不要、見学歓迎。","areaServed":"福岡市","sameAs":["https://fukuoka-math.web.app/"]},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"哲学や心理学の知識がなくても大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"大丈夫です。予備知識は問いません。わからないところを質問しながら読むのが、この会の読み方です。"}},
+  {"@type":"Question","name":"どこで、いつ集まっていますか？","acceptedAnswer":{"@type":"Answer","text":"福岡市内で毎週活動しています。くわしい日時と場所は、お問い合わせのあとにメールでお知らせします。"}},
+  {"@type":"Question","name":"人前で話すのが苦手です。発言しないといけませんか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。聞いているだけの参加で大丈夫です。順番に意見を求めることもしません。"}},
+  {"@type":"Question","name":"一人で参加する人はいますか？","acceptedAnswer":{"@type":"Answer","text":"ほとんどの方が一人で申し込んで来ています。年代もばらばらなので、一人でも浮きません。"}},
+  {"@type":"Question","name":"毎週来ないといけませんか？","acceptedAnswer":{"@type":"Answer","text":"来られる週だけで構いません。一回だけの見学も、しばらく空いてからの参加も歓迎です。"}}
+ ]}
+]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
@@ -87,6 +98,9 @@ header.site nav a:hover { color: var(--accent); }
 .first { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .first .card h3 { margin-top: 0; }
 .first .card .em { font-family: "Noto Serif JP", serif; font-size: 22px; color: var(--accent); line-height: 1.4; display: block; margin-bottom: 10px; }
+.sister { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 24px; display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.sister p { margin: 0; color: var(--muted); font-size: 15px; }
+footer a { color: var(--muted); }
 .cta-bar { display: none; }
 @media (max-width: 720px) {
   .facts { grid-template-columns: 1fr 1fr; margin-top: 0; }
@@ -363,8 +377,17 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
   <a class="btn" href="#contact">見学を申し込む</a>
 </div>
 
+<section id="sister">
+  <div class="wrap">
+    <div class="sister">
+      <p><strong>姉妹会のご案内</strong><br>同じ運営で、数学の本を定義から一行ずつ読む勉強会も始めます。最初のテーマは圏論です。</p>
+      <a class="btn sub" href="https://fukuoka-math.web.app/">数学勉強会（圏論）を見る</a>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <div class="wrap">© 福岡市 哲学書・心理学輪読会</div>
+  <div class="wrap">© 福岡市 哲学書・心理学輪読会 ・ <a href="https://fukuoka-math.web.app/">数学勉強会（圏論）</a></div>
 </footer>
 
 </body>
