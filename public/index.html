@@ -3,11 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>福岡市 哲学書・心理学輪読会</title>
-<meta name="description" content="福岡市で毎週活動している、哲学書・心理学書の読書会です。テキストを一文ずつ丁寧に読み込みます。予備知識は不要で、年齢層も幅広く、初めての方も歓迎しています。">
+<title>福岡の哲学書・心理学 輪読会｜初心者歓迎・見学からどうぞ</title>
+<meta name="description" content="福岡市で毎週集まって、哲学書・心理学書を一文ずつ読む読書会です。予備知識は不要、一人での参加が多く、まずは見学から。聞いているだけでも大丈夫です。">
+<link rel="canonical" href="https://fukuoka-rindoku.web.app/">
 <meta property="og:title" content="福岡市 哲学書・心理学輪読会">
 <meta property="og:description" content="福岡市で毎週活動している、哲学書・心理学書の読書会。予備知識は不要、初めての方も歓迎。">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://fukuoka-rindoku.web.app/">
+<meta property="og:image" content="https://fukuoka-rindoku.web.app/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"福岡市 哲学書・心理学輪読会","url":"https://fukuoka-rindoku.web.app/","image":"https://fukuoka-rindoku.web.app/img/og.jpg","description":"福岡市で毎週活動している哲学書・心理学書の読書会。予備知識不要、見学歓迎。","areaServed":"福岡市"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
@@ -70,6 +75,31 @@ header.site nav a:hover { color: var(--accent); }
   border: 0; font-size: 16px; font-family: inherit; cursor: pointer;
 }
 .btn:hover { opacity: .9; }
+.btn.sub { background: transparent; color: var(--accent); border: 1px solid var(--accent); margin-left: 10px; }
+.cta-note { color: var(--muted); font-size: 13px; margin: 10px 0 0; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding: 0; list-style: none; }
+.badges li { background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 500; padding: 5px 12px; border-radius: 999px; }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: -24px; }
+.facts div { padding: 18px 20px; border-left: 1px solid var(--line); }
+.facts div:first-child { border-left: 0; }
+.facts b { display: block; font-size: 12px; color: var(--accent); letter-spacing: .1em; font-weight: 500; margin-bottom: 4px; }
+.facts span { font-size: 15px; }
+.first { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.first .card h3 { margin-top: 0; }
+.first .card .em { font-family: "Noto Serif JP", serif; font-size: 22px; color: var(--accent); line-height: 1.4; display: block; margin-bottom: 10px; }
+.cta-bar { display: none; }
+@media (max-width: 720px) {
+  .facts { grid-template-columns: 1fr 1fr; margin-top: 0; }
+  .facts div { border-left: 0; border-top: 1px solid var(--line); }
+  .facts div:nth-child(-n+2) { border-top: 0; }
+  .facts div:nth-child(2n) { border-left: 1px solid var(--line); }
+  .first { grid-template-columns: 1fr; }
+  .btn.sub { margin: 10px 0 0; }
+  .cta-bar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; gap: 10px; align-items: center; justify-content: space-between; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(0,0,0,.08); }
+  .cta-bar span { font-size: 13px; color: var(--muted); line-height: 1.4; }
+  .cta-bar .btn { padding: 11px 20px; font-size: 15px; white-space: nowrap; }
+  body { padding-bottom: 72px; }
+}
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 42%; border-radius: 14px; display: block; }
 
@@ -140,10 +170,10 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
     <a class="logo" href="#">福岡市 哲学書・心理学輪読会</a>
     <nav>
       <a href="#about">会について</a>
-      <a href="#scene">活動の様子</a>
+      <a href="#first">初めての方へ</a>
       <a href="#flow">参加の流れ</a>
       <a href="#faq">よくある質問</a>
-      <a href="#contact">お問い合わせ</a>
+      <a href="#contact">見学を申し込む</a>
     </nav>
   </div>
 </header>
@@ -154,12 +184,29 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
       <div>
       <p class="eyebrow">FUKUOKA ・ PHILOSOPHY &amp; PSYCHOLOGY READING CIRCLE</p>
       <h1><span class="nw">一冊の本を、</span><br><span class="nw">じっくり、深く読む。</span></h1>
-      <p class="lead">福岡市で毎週活動している、哲学書と心理学書の読書会です。感想を言い合うだけで終わらせず、本に書かれていることを一文ずつ確かめながら読んでいます。専門知識は必要ありません。学生から社会人、シニアの方まで、幅広い年代の方が参加しています。「難しい本を、一度ちゃんと読んでみたい」。そんな気持ちがあれば十分です。</p>
-      <a class="btn" href="#contact">フォームから問い合わせる</a>
+      <p class="lead">福岡市で毎週集まって、哲学書と心理学書を一文ずつ確かめながら読んでいる読書会です。専門知識はいりません。「難しい本を、一度ちゃんと読んでみたい」。その気持ちがあれば十分です。</p>
+      <ul class="badges">
+        <li>予備知識は不要</li>
+        <li>まずは見学から</li>
+        <li>聞いているだけでもOK</li>
+        <li>途中からの参加も歓迎</li>
+        <li>学生からシニアまで</li>
+      </ul>
+      <a class="btn" href="#contact">見学を申し込む</a><a class="btn sub" href="#contact">質問だけしてみる</a>
+      <p class="cta-note">フォームは1分ほどで送れます。返信はメールでお送りします。</p>
       </div>
       <div class="hero-photo">
         <img src="img/reading-1.jpg" alt="テーブルに並んだカント『純粋理性批判』の解説書と英訳、開いた本" width="1200" height="1594">
       </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="facts">
+      <div><b>活動</b><span>毎週1回</span></div>
+      <div><b>場所</b><span>福岡市内（申し込み後にご案内）</span></div>
+      <div><b>読む本</b><span>哲学書・心理学書</span></div>
+      <div><b>初めての方</b><span>見学から。一回だけでも</span></div>
     </div>
   </div>
 
@@ -186,6 +233,26 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
     </div>
   </section>
 
+  <section id="first">
+    <div class="wrap">
+      <h2><small>FOR FIRST-TIMERS</small>初めての方へ</h2>
+      <div class="first">
+        <div class="card">
+          <span class="em">聞いているだけで大丈夫</span>
+          <p>最初の回は、みんなの読み方を見ているだけで構いません。慣れてきたら「ここがわからない」と言うところから始めてください。それがこの会でいちばん歓迎される発言です。</p>
+        </div>
+        <div class="card">
+          <span class="em">本を持っていなくても</span>
+          <p>いま読んでいる本や進み具合は、お申し込み後のメールでお伝えします。見学の時点で読んでいなくても、持っていなくても大丈夫です。</p>
+        </div>
+        <div class="card">
+          <span class="em">一人で来る方がほとんど</span>
+          <p>友人同士ではなく、一人で申し込んで来る方がほとんどです。毎回の参加を約束する必要もありません。都合のつく週に来てください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="scene">
     <div class="wrap">
       <h2><small>SCENE</small>活動の様子</h2>
@@ -205,9 +272,9 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
     <div class="wrap">
       <h2><small>HOW TO JOIN</small>参加の流れ</h2>
       <ol class="steps">
-        <li><strong>フォームからご連絡ください</strong><span>このページ下のフォームに、お名前とメールアドレスを入れて送ってください。</span></li>
-        <li><strong>メールでご案内します</strong><span>活動の曜日・時間・場所、いま読んでいる本などをお知らせします。</span></li>
-        <li><strong>会に参加</strong><span>まずは見学からどうぞ。実際の様子を見てから、参加するかどうか決めていただけます。</span></li>
+        <li><strong>フォームから送る（1分）</strong><span>お名前とメールアドレスがあれば送れます。「見学したい」「質問がある」だけでも構いません。</span></li>
+        <li><strong>メールでご案内します</strong><span>活動の曜日・時間・場所、いま読んでいる本と進み具合、当日の持ち物をお知らせします。</span></li>
+        <li><strong>まずは見学</strong><span>実際の様子を見てから、続けるかどうか決めてください。その場で決めなくても大丈夫です。</span></li>
       </ol>
     </div>
   </section>
@@ -223,15 +290,23 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
         <dt>どこで、いつ集まっていますか？</dt>
         <dd>福岡市内で毎週活動しています。くわしい日時と場所は、お問い合わせのあとにメールでお知らせします。</dd>
         <dt>途中から参加しても読書についていけますか？</dt>
-        <dd>読んでいる本や進み具合はご連絡のときにお伝えします。気になることはフォームから何でも聞いてください。</dd>
+        <dd>読んでいる本や進み具合はご連絡のときにお伝えします。その日に読む範囲をその場で一緒に読むので、前の回を知らなくても参加できます。</dd>
+        <dt>人前で話すのが苦手です。発言しないといけませんか？</dt>
+        <dd>いいえ。聞いているだけの参加で大丈夫です。順番に意見を求めることもしません。</dd>
+        <dt>一人で参加する人はいますか？</dt>
+        <dd>ほとんどの方が一人で申し込んで来ています。年代もばらばらなので、一人でも浮きません。</dd>
+        <dt>毎週来ないといけませんか？</dt>
+        <dd>来られる週だけで構いません。一回だけの見学も、しばらく空いてからの参加も歓迎です。</dd>
+        <dt>本を読んでいなくても参加できますか？</dt>
+        <dd>見学の回は読んでいなくて大丈夫です。続けて参加される場合は、読んでいる本をご案内しますので、お手元に用意してください。</dd>
       </dl>
     </div>
   </section>
 
   <section id="contact">
     <div class="wrap">
-      <h2><small>CONTACT</small>お問い合わせ・参加希望</h2>
-      <p>参加してみたい方、見学したい方、ちょっと話を聞いてみたい方は、こちらのフォームからお気軽にご連絡ください。</p>
+      <h2><small>CONTACT</small>見学を申し込む・質問する</h2>
+      <p>「見学したい」「ちょっと聞いてみたい」だけで大丈夫です。1分ほどで送れます。返信はメールでお送りします。</p>
       <form action="https://formsubmit.co/hikakin0706@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="【輪読会】ホームページからのお問い合わせ">
         <input type="hidden" name="_template" value="table">
@@ -265,8 +340,8 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
           <div class="field">
             <label for="kind">ご用件</label>
             <select id="kind" name="ご用件">
-              <option>参加したい</option>
               <option>見学したい</option>
+              <option>参加したい</option>
               <option>質問がある</option>
               <option>その他</option>
             </select>
@@ -277,11 +352,16 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
           <textarea id="msg" name="メッセージ" placeholder="興味のある本や分野、質問などがあればご自由にどうぞ。"></textarea>
         </div>
         <button class="btn" type="submit">送信する</button>
-        <p class="note">いただいた情報は、この会からのご連絡にだけ使います。</p>
+        <p class="note">いただいた情報は、この会からのご連絡にだけ使います。しつこい勧誘はしません。</p>
       </form>
     </div>
   </section>
 </main>
+
+<div class="cta-bar">
+  <span>予備知識不要・見学から<br>聞いているだけでもOK</span>
+  <a class="btn" href="#contact">見学を申し込む</a>
+</div>
 
 <footer>
   <div class="wrap">© 福岡市 哲学書・心理学輪読会</div>
