@@ -1,10 +1,21 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": ["firebase.json", "**/.*"],
-    "cleanUrls": true,
-    "headers": [
-      { "source": "img/**", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] }
+    "ignore": [
+      "firebase.json",
+      "**/.*"
+    ],
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://fukuoka-tsudoi.web.app/rindoku/",
+        "type": 301
+      },
+      {
+        "source": "/:path*",
+        "destination": "https://fukuoka-tsudoi.web.app/rindoku/:path",
+        "type": 301
+      }
     ]
   }
 }

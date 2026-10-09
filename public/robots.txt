@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /thanks.html
-Sitemap: https://fukuoka-rindoku.web.app/sitemap.xml
