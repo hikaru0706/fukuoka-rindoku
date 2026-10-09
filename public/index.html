@@ -175,6 +175,7 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
   form { padding: 22px 18px; }
   section { padding: 48px 0; }
 }
+.wish{border:2px solid var(--accent);background:var(--accent-soft);border-radius:12px;padding:18px 22px;margin:28px 0}.wish b{display:block;font-size:1.1em;margin-bottom:6px;color:var(--accent)}.wish p{margin:0}.wish a{color:var(--accent);font-weight:700}
 </style>
 <meta name="google-site-verification" content="Vni--_pF_s9ADA-xtSbt_DIjOcew5CdUhflgkWiizew">
 </head>
@@ -220,9 +221,10 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
     <div class="facts">
       <div><b>活動</b><span>毎週1回</span></div>
       <div><b>場所</b><span>福岡市内（申し込み後にご案内）</span></div>
-      <div><b>読む本</b><span>哲学書・心理学書</span></div>
+      <div><b>読む本</b><span>哲学書・心理学書（希望を募集中）</span></div>
       <div><b>初めての方</b><span>見学から。一回だけでも</span></div>
     </div>
+    <div class="wish"><b>読みたい本を教えてください</b><p>次に読む本は、参加する人の希望を聞いて決めます。「この本を一度ちゃんと読みたい」「この章だけでも」という希望があれば、申し込みフォームの「読みたい本」の欄に書いてください。書名だけで構いません。<a href="#contact">申し込みフォームへ</a></p></div>
   </div>
 
   <section id="about">
@@ -363,8 +365,12 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
           </div>
         </div>
         <div class="field">
+          <label for="want">読みたい本（任意）</label>
+          <textarea id="want" name="読みたい本" style="min-height:80px" placeholder="例：カント『純粋理性批判』、フロイト『精神分析入門』、ウィトゲンシュタイン『論理哲学論考』など。書名だけで大丈夫です。"></textarea>
+        </div>
+        <div class="field">
           <label for="msg">メッセージ</label>
-          <textarea id="msg" name="メッセージ" placeholder="興味のある本や分野、質問などがあればご自由にどうぞ。"></textarea>
+          <textarea id="msg" name="メッセージ" placeholder="質問などがあればご自由にどうぞ。"></textarea>
         </div>
         <button class="btn" type="submit">送信する</button>
         <p class="note">いただいた情報は、この会からのご連絡にだけ使います。しつこい勧誘はしません。</p>
